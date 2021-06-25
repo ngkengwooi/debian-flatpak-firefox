@@ -14,7 +14,7 @@ flatpak -y install org.freedesktop.Platform.ffmpeg-full
 # Disable bitmap fonts to avoid fuzzy fonts
 # Source: https://bugzilla.mozilla.org/show_bug.cgi?id=1621915
 
-echo "<?xml version='1.0'?>
+printf "<?xml version='1.0'?>
 <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
 <fontconfig>
     <!-- Disable bitmap fonts. -->
