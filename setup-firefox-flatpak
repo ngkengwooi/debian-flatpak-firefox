@@ -1,0 +1,24 @@
+#!/bin/bash -e
+
+# Run this script with sudo
+
+# Install firefox from flathub
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak -y install org.mozilla.firefox
+
+# Install ffmpeg-full to solve video lag
+
+flatpak -y install org.freedesktop.Platform.ffmpeg-full
+
+# Disable bitmap fonts to avoid fuzzy fonts
+# Source: https://bugzilla.mozilla.org/show_bug.cgi?id=1621915
+
+echo "<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+    <!-- Disable bitmap fonts. -->
+    <selectfont><rejectfont><pattern>
+        <patelt name="scalable"><bool>false</bool></patelt>
+    </pattern></rejectfont></selectfont>
+</fontconfig>" > ~/.var/app/org.mozilla.firefox/config/fontconfig/fonts.conf
