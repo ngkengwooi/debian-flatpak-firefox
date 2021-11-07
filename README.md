@@ -15,6 +15,6 @@ apt install flatpak
 ```
 
 ## Usage
-1. Download the script to the Debian system.
-2. Make the script executable: `chmod +x debian-flatpak-firefox`.
-3. Execute `./debian-flatpak-firefox` from the directory where the script is located to install it for the current user.
+1. Download the script setup-firefox-flatpak to the Debian system.
+2. Make the script executable: `chmod +x setup-firefox-flatpak`.
+3. Execute `./setup-firefox-flatpak` from the directory where the script is located to install it for the current user.
