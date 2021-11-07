@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 # Install firefox from flathub for current user only
+# This requires flatpak to be enabled on the system already
 
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install --user -y org.mozilla.firefox
